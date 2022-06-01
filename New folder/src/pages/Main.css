@@ -1,0 +1,314 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: rgb(51, 153, 122);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('https://user-images.githubusercontent.com/102716730/171255761-8a98caf4-6dd8-42b8-b5a7-b58e47e827dc.png') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:rgb(167, 30, 30);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:rgb(27, 2, 32);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #dee2dd;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 180px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* ShayarisSection */
+
+#Shayaris-container{ 
+    position: relative;
+}
+
+#Shayaris-container::before{
+ content: "";
+ position: absolute;
+ background: url('https://user-images.githubusercontent.com/102716730/171255761-8a98caf4-6dd8-42b8-b5a7-b58e47e827dc.png');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+#shayaris .box{ 
+    
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #d2d7d8;
+    margin-bottom: 20px;
+    
+}
+
+#shayaris .box img{ 
+   height: 180px;
+   margin: auto;
+   display: block;
+}
+
+#shayaris .box p{
+    font-family: 'Bree Serif', serif;
+   
+    
+
+}
+
+
+#shayaris img{
+    height: 200px;
+    width: 200px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('https://user-images.githubusercontent.com/102716730/171255761-8a98caf4-6dd8-42b8-b5a7-b58e47e827dc.png') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+#animation{
+    background: #FFC107;
+}
+
+:root{
+    --deft:100px;
+}
+    .wrapper{
+        margin-top: 250px;
+        perspective:1000px;
+    }
+    .cube-box{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        transform-style:preserve-3d;
+    }
+    
+    .cube-box img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0.8;
+      transition: 0.5s;
+      object-fit: cover;
+    }
+    
+    
+    .cube-box img:nth-child(1){
+        transform: rotateY(0deg) translateZ(var(--deft));
+    }
+    
+    .cube-box img:nth-child(2){
+        transform: rotateY(90deg) translateZ(var(--deft));
+    }
+    
+    .cube-box img:nth-child(3){
+        transform: rotateY(180deg) translateZ(var(--deft));
+    }
+    
+    .cube-box img:nth-child(4){
+        transform: rotateY(-90deg) translateZ(var(--deft));
+    }
+    
+    .cube-box img:nth-child(5){
+        transform: rotateX(90deg) translateZ(var(--deft));
+    }
+    
+    .cube-box img:nth-child(6){
+        transform: rotateX(-90deg) translateZ(var(--deft));
+    }
+    
+    .cube-box{
+        animation: loops 10s linear infinite;
+    }
+    
+    .cube-box:hover{
+        --deft:200px;
+        animation-play-state: paused;
+    }
+    
+    @keyframes loops{
+        0%{ transform: rotateX(0deg) rotateY(0deg); }
+        100%{ transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+
+
+footer{
+    background: black;
+    color: rgba(11, 99, 84, 0.336);
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid rgb(114, 202, 224);
+    background-color: rgb(199, 23, 23);
+    color: rgb(204, 98, 98);
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
